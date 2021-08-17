@@ -1,0 +1,75 @@
+:root {
+	--orange: hsl(31, 77%, 52%);
+	--dark_cyan: hsl(184, 100%, 22%);
+	--very_dark_cyan: hsl(179, 100%, 13%);
+	--white_description: hsla(0, 0%, 100%, 0.75);
+	--hover_buttons: hsla(0, 0%, 100%, 0.75);
+}
+* {
+	box-sizing: border-box;
+	padding: 0;
+}
+body {
+	width: 100%;
+	min-height: 100vh;
+	margin: 0;
+	background-color: #222;
+	font-size: 15px;
+	display: grid;
+	place-items: center center;
+}
+.cards {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	margin: 100px 0;
+}
+.card {
+	position: relative;
+	height: 450px;
+	width: 300px;
+	padding-top: 2.5em;
+	padding-left: 2em;
+	text-align: left;
+	color: var(--white_description);
+	font-family: "Lexend Deca", sans-serif;
+}
+.card--orange {
+	background-color: var(--orange);
+}
+.card--cyan {
+	background-color: var(--dark_cyan);
+}
+.card--darkcyan {
+	background-color: var(--very_dark_cyan);
+}
+.card__title {
+	font-family: "Big Shoulders Display", cursive;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+}
+.card__description {
+	width: 200px;
+	line-height: 1.5em;
+}
+.card__link {
+	position: absolute;
+	padding: 0.7em 2em;
+	background-color: #ffff;
+	border-radius: 1.5em;
+	text-decoration: none;
+	bottom: 45px;
+	transition: 0.3s ease-in-out;
+}
+.card__link--orange {
+	color: var(--orange);
+}
+.card__link--cyan {
+	color: var(--dark_cyan);
+}
+.card__link--darkcyan {
+	color: var(--very_dark_cyan);
+}
+.card__link:hover {
+	background-color: var(--hover_buttons);
+}
