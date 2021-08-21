@@ -1,0 +1,131 @@
+:root {
+	--cyan: hsl(179, 62%, 43%);
+	--lightCyan: hsl(179, 47%, 52%);
+	--brightYellow: hsl(71, 73%, 54%);
+	--lightGray: hsl(201, 44%, 92%);
+	--grayishBlue: hsl(218, 22%, 67%);
+	--white: hsl(0, 0%, 100%);
+}
+* {
+	margin: 0;
+}
+body {
+	font-family: "Karla", sans-serif;
+	background-color: var(--lightGray);
+}
+.main {
+	padding: 4em 2em;
+}
+.suscription {
+	display: grid;
+	max-width: 600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+.suscription-header,
+.suscription-price,
+.suscription-us {
+	padding: 1.5em;
+}
+
+.suscription-header {
+	background-color: var(--white);
+	border-top-left-radius: 0.3rem;
+	border-top-right-radius: 0.3rem;
+}
+.suscription-header__title {
+	font-size: 1.3rem;
+	font-weight: 700;
+	color: var(--cyan);
+	margin-bottom: 1em;
+}
+.suscription-header__subtitle {
+	font-size: 1rem;
+	font-weight: 700;
+	color: var(--brightYellow);
+	margin-bottom: 1.5em;
+}
+.suscription-header__text {
+	font-size: 0.8rem;
+	color: var(--grayishBlue);
+	line-height: 1.8;
+}
+
+.suscription-price {
+	background-color: var(--cyan);
+	color: var(--white);
+}
+.suscription-price__title {
+	font-size: 1rem;
+	margin-bottom: 1em;
+}
+.suscription-price__number {
+	font-size: 2rem;
+	margin-bottom: 0.3em;
+}
+.suscription-price__share {
+	font-size: 0.9rem;
+	color: var(--lightGray);
+}
+.suscription-price__text {
+	font-size: 0.9rem;
+	margin-bottom: 2em;
+}
+.suscription-price__button {
+	font-size: 1rem;
+	color: var(--white);
+	background-color: var(--brightYellow);
+	text-decoration: none;
+	text-transform: capitalize;
+	display: block;
+	width: 100%;
+	padding: 0.9em 0;
+	text-align: center;
+	border-radius: 0.3rem;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.suscription-us {
+	background-color: var(--lightCyan);
+	color: var(--white);
+	border-bottom-left-radius: 0.3rem;
+	border-bottom-right-radius: 0.3rem;
+}
+.suscription-us__title {
+	font-size: 1rem;
+	margin-bottom: 1em;
+}
+.suscription-us__list {
+	list-style: none;
+	padding-left: 0;
+	font-size: 0.9rem;
+	color: var(--lightGray);
+	line-height: 1.4;
+}
+
+@media screen and (min-width: 768px) {
+	.main {
+		height: 100vh;
+		padding: 0;
+		display: grid;
+		place-items: center;
+	}
+	.suscription {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.suscription-header {
+		grid-column: 1/3;
+	}
+	.suscription-header__text {
+		font-size: 1rem;
+	}
+	.suscription-price {
+		border-bottom-left-radius: 0.3rem;
+	}
+	.suscription-price__button:hover {
+		filter: opacity(0.9);
+	}
+	.suscription-us {
+		border-bottom-left-radius: 0;
+	}
+}
