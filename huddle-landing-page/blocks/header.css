@@ -1,0 +1,110 @@
+.header {
+	background-image: url(../resourses/images/bg-hero-mobile.svg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-color: var(--veryPaleCyan);
+	padding: 1.4em 1em;
+	text-align: center;
+}
+.header__top {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	margin-bottom: 4.4em;
+}
+.header__logo {
+	width: 90px;
+}
+.header__info {
+	padding: 0 0.6em;
+	margin-bottom: 3em;
+}
+.header__title {
+	font-size: 1.3rem;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 1em;
+	font-family: "Poppins", sans-serif;
+	color: var(--veryDarkCyan);
+}
+.header__text {
+	font-size: 0.9rem;
+	font-weight: 400;
+	line-height: 1.5;
+	margin-bottom: 2em;
+	color: var(--veryDarkCyan);
+}
+.header__img {
+	padding: 0 0.6em;
+}
+
+.header__button--top,
+.header__button--banner {
+	border-radius: 2em;
+	text-decoration: none;
+	box-shadow: 0 5px 10px rgb(0 0 0 / 0.1);
+}
+.header__button--top {
+	background-color: #fff;
+	color: var(--veryDarkCyan);
+	padding: 0.3em 2em;
+	font-size: 0.6rem;
+	font-weight: 700;
+}
+.header__button--banner {
+	background: var(--pink);
+	color: #fff;
+	width: 80%;
+	max-width: 350px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1.2em 0;
+	font-size: 0.6rem;
+	font-weight: 700;
+	letter-spacing: 1px;
+}
+
+@media screen and (min-width: 1400px) {
+	.header {
+		width: 100%;
+		padding: 3em 5%;
+		background-image: url(../resourses/images/bg-hero-desktop.svg);
+	}
+	.header__logo {
+		width: 200px;
+	}
+	.header__banner {
+		display: flex;
+		justify-content: space-between;
+	}
+	.header__info {
+		width: 40%;
+		text-align: left;
+	}
+	.header__title {
+		margin-top: 2em;
+		font-size: 3rem;
+	}
+	.header__text {
+		font-size: 1.2rem;
+	}
+	.header__img {
+		max-width: 55%;
+		height: auto;
+	}
+	.header__button--top {
+		padding: 1em 3em;
+		font-size: 0.8rem;
+	}
+	.header__button--banner {
+		padding: 1.5em 1em;
+		font-size: 1rem;
+		text-align: center;
+		margin-left: 0;
+	}
+	.header__button--banner:hover,
+	.header__button--top:hover {
+		opacity: 0.5;
+	}
+}

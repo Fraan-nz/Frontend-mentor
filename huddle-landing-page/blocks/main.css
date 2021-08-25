@@ -1,0 +1,117 @@
+.main {
+	padding: 3em 1em 10em 1em;
+	position: relative;
+}
+.article,
+.aside {
+	border-radius: 1rem;
+	padding: 3em 1.7em 1.7em;
+	margin-bottom: 2em;
+	box-shadow: 0 0 10px 2px rgb(0 0 0 /0.1);
+}
+.article__img {
+	width: 230px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 2.8em;
+}
+.article__info {
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+.article__title,
+.aside__title {
+	font-size: 1.1rem;
+	font-family: "Poppins", sans-serif;
+	margin-bottom: 0.7rem;
+	color: var(--veryDarkCyan);
+}
+.article__text {
+	font-size: 0.8rem;
+	line-height: 1.5;
+	color: var(--grayishBlue);
+	margin: 0;
+}
+.aside {
+	position: absolute;
+	padding: 2em 1em 2em 1em;
+	background-color: #fff;
+	z-index: 100;
+	bottom: -5em;
+	left: 2.5%;
+	right: 2.5%;
+}
+.aside__title {
+	text-align: center;
+	font-size: 1rem;
+	margin-bottom: 1.4em;
+	margin-top: 0;
+}
+.aside__button {
+	border-radius: 2em;
+	text-decoration: none;
+	box-shadow: 0 5px 10px rgb(0 0 0 / 0.1);
+	background: var(--pink);
+	color: #fff;
+	width: 70%;
+	max-width: 400px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding: 1.2em 0;
+	font-size: 0.6rem;
+	font-weight: 700;
+	text-align: center;
+	letter-spacing: 1px;
+}
+
+@media screen and (min-width: 768px) {
+	.main {
+		padding: 3em 10% 20em 10%;
+	}
+	.article {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		padding: 3em 1.7em;
+	}
+	.article--right {
+		display: flex;
+		flex-direction: row-reverse;
+	}
+	.article__info {
+		text-align: left;
+		margin-left: auto;
+		margin-right: auto;
+		width: 50%;
+	}
+	.article__img {
+		width: 40%;
+		margin-bottom: 0;
+	}
+	.article__title,
+	.aside__title {
+		font-size: 2rem;
+	}
+	.article__text {
+		font-size: 1.2rem;
+	}
+	.aside {
+		position: absolute;
+		padding: 2em 1em 2em 1em;
+		background-color: #fff;
+		z-index: 100;
+		bottom: -5em;
+		left: 20%;
+		right: 20%;
+	}
+	.aside__button {
+		padding: 1.5em 1em;
+		font-size: 1rem;
+	}
+	.aside__button:hover {
+		opacity: 0.5;
+	}
+}
