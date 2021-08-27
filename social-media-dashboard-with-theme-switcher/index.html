@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+		<title>Frontendmentor Challenge</title>
+	</head>
+	<body>
+		<div class="container">
+			<header class="header">
+				<div class="header__titles">
+					<h1 class="header__title">Social Media Dashboard</h1>
+					<p class="header__subtitle">Total Followers: 23,004</p>
+				</div>
+				<div class="dark-mode">
+					<span class="dark-mode__text">Dark Mode</span>
+					<input
+						type="checkbox"
+						name="darkMode"
+						id="darkMode"
+						class="dark-mode__check"
+					/>
+					<label for="darkMode" class="dark-mode__toggle"></label>
+				</div>
+			</header>
+			<section class="social">
+				<article class="card card--fb">
+					<div class="card__user">
+						<img
+							src="./resources/images/icon-facebook.svg"
+							alt="facebook"
+							class="social-icon"
+						/><span>@nathanf</span>
+					</div>
+					<span class="card__number">1987</span>
+					<span class="card__followers">Followers</span>
+					<p class="card__today aument">12 Today</p>
+				</article>
+				<article class="card card--tw">
+					<div class="card__user">
+						<img
+							src="./resources/images/icon-twitter.svg"
+							alt="twitter"
+							class="social-icon"
+						/><span>@nathanf</span>
+					</div>
+					<span class="card__number">1044</span>
+					<span class="card__followers">Followers</span>
+					<p class="card__today aument">99 Today</p>
+				</article>
+				<article class="card card--instagram">
+					<div class="card__user">
+						<img
+							src="./resources/images/icon-instagram.svg"
+							alt="instagram"
+							class="social-icon"
+						/><span>@realnathanf</span>
+					</div>
+					<span class="card__number">11k</span>
+					<span class="card__followers">Followers</span>
+					<p class="card__today aument">1099 Today</p>
+				</article>
+				<article class="card card--youtube">
+					<div class="card__user">
+						<img
+							src="./resources/images/icon-youtube.svg"
+							alt="youtube"
+							class="social-icon"
+						/><span>Nathan F.</span>
+					</div>
+					<span class="card__number">8239</span>
+					<span class="card__followers">Subscribers</span>
+					<p class="card__today decrement">144 Today</p>
+				</article>
+			</section>
+			<section class="overview">
+				<h2 class="overview__title">Overview - Today</h2>
+				<article class="overview-card">
+					<div class="overview-card__total">
+						<span>Page Views</span>
+						<span class="overview-card__number">87</span>
+					</div>
+					<div class="overview-card__social">
+						<img
+							src="./resources/images/icon-facebook.svg"
+							alt="facebook"
+							class="social-icon"
+						/>
+						<span class="overview-card__percent aument">3%</span>
+					</div>
+				</article>
+				<article class="overview-card">
+					<div class="overview-card__total">
+						<span>Likes</span>
+						<span class="overview-card__number"> 52 </span>
+					</div>
+					<div class="overview-card__social">
+						<img
+							src="./resources/images/icon-facebook.svg"
+							alt="facebook"
+							class="social-icon"
+						/>
+						<span class="overview-card__percent decrement">2%</span>
+					</div>
+				</article>
+				<article class="overview-card">
+					<div class="overview-card__total">
+						<span>Likes</span>
+						<span class="overview-card__number">5462</span>
+					</div>
+					<div class="overview-card__social">
+						<img
+							src="./resources/images/icon-instagram.svg"
+							alt="instagram"
+							class="social-icon"
+						/>
+						<span class="overview-card__percent aument">2257%</span>
+					</div>
+				</article>
+				<article class="overview-card">
+					<div class="overview-card__total">
+						<span>Profile Views</span>
+						<span class="overview-card__number">52k</span>
+					</div>
+					<div class="overview-card__social">
+						<img
+							src="./resources/images/icon-instagram.svg"
+							alt="instagram"
+							class="social-icon"
+						/>
+						<span class="overview-card__percent aument">1375%</span>
+					</div>
+				</article>
+				<article class="overview-card">
+					<div class="overview-card__total">
+						<span>Retweets</span>
+						<span class="overview-card__number">117</span>
+					</div>
+					<div class="overview-card__social">
+						<img
+							src="./resources/images/icon-twitter.svg"
+							alt="twitter"
+							class="social-icon"
+						/>
+						<span class="overview-card__percent aument">303%</span>
+					</div>
+				</article>
+				<article class="overview-card">
+					<div class="overview-card__total">
+						<span>Likes</span>
+						<span class="overview-card__number">507</span>
+					</div>
+					<div class="overview-card__social">
+						<img
+							src="./resources/images/icon-twitter.svg"
+							alt="twitter"
+							class="social-icon"
+						/>
+						<span class="overview-card__percent aument">553%</span>
+					</div>
+				</article>
+				<article class="overview-card">
+					<div class="overview-card__total">
+						<span>Likes</span>
+						<span class="overview-card__number">107</span>
+					</div>
+					<div class="overview-card__social">
+						<img
+							src="./resources/images/icon-youtube.svg"
+							alt="youtube"
+							class="social-icon"
+						/>
+						<span class="overview-card__percent decrement">19%</span>
+					</div>
+				</article>
+				<article class="overview-card">
+					<div class="overview-card__total">
+						<span>Total Views</span>
+						<span class="overview-card__number">1407</span>
+					</div>
+					<div class="overview-card__social">
+						<img
+							src="./resources/images/icon-youtube.svg"
+							alt="youtube"
+							class="social-icon"
+						/>
+						<span class="overview-card__percent decrement">12%</span>
+					</div>
+				</article>
+			</section>
+		</div>
+		<script src="./scripts.js"></script>
+	</body>
+</html>
