@@ -1,0 +1,337 @@
+:root {
+	/* Primary */
+	--scissorsGradient: linear-gradient(
+		to bottom,
+		hsl(39, 89%, 49%),
+		hsl(40, 84%, 53%)
+	);
+	--paperGradient: linear-gradient(
+		to bottom,
+		hsl(230, 89%, 62%),
+		hsl(230, 89%, 65%)
+	);
+	--rockGradient: linear-gradient(
+		to bottom,
+		hsl(349, 71%, 52%),
+		hsl(349, 70%, 56%)
+	);
+	--lizardGradient: linear-gradient(
+		to bottom,
+		hsl(261, 73%, 60%),
+		hsl(261, 72%, 63%)
+	);
+	--cyan: linear-gradient(to bottom, hsl(189, 59%, 53%), hsl(189, 58%, 57%));
+
+	/* Neutral */
+	--darkText: hsl(229, 25%, 31%);
+	--scoreText: hsl(229, 64%, 46%);
+	--headerOutline: hsl(217, 16%, 45%);
+	--white: hsl(0, 0%, 100%);
+
+	/* Background */
+	--radialGradient: hsl(214, 47%, 23%) to hsl(237, 49%, 15%);
+}
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	font-family: "Barlow Semi Condensed", sans-serif;
+}
+.container {
+	width: 100%;
+	min-width: 360px;
+	height: 100vh;
+	min-height: 640px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background: radial-gradient(
+		100% 100% at 50% 0%,
+		hsl(214, 47%, 23%) 0%,
+		hsl(237, 49%, 15%) 100%
+	);
+	position: relative;
+}
+/* ----------SCOREBOARD---------- */
+.scoreboard {
+	min-width: 324px;
+	width: 90%;
+	max-width: 700px;
+	border: 3px solid var(--headerOutline);
+	border-radius: 10px;
+	margin-top: 2em;
+	padding: 0.8em 0.8em;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 10;
+}
+.scoreboard__title {
+	width: 6em;
+}
+.scoreboard__container-score {
+	width: 5em;
+	height: 5em;
+	background-color: var(--white);
+	border-radius: 8px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	gap: 1px;
+}
+.scoreboard__text-score {
+	color: var(--scoreText);
+	font-size: 0.8rem;
+	font-weight: 600;
+	letter-spacing: 0.2rem;
+}
+.scoreboard__score {
+	color: var(--darkText);
+	font-size: 3rem;
+	font-weight: 700;
+	line-height: 3rem;
+}
+
+/* ----------HANDS---------- */
+.hands {
+	display: grid;
+	grid-template-columns: repeat(2, 100px);
+	grid-template-areas:
+		"paper scissors"
+		"rock rock";
+	max-width: 700px;
+	place-items: center;
+	background-image: url(./resources/images/bg-triangle.svg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	position: relative;
+	top: 13vh;
+	z-index: 100;
+}
+.hands__img img {
+	width: 40px;
+	height: auto;
+}
+.hands__img {
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	background: var(--white);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: inset 0px 7px 0px 0px rgba(0, 0, 0, 0.2);
+	position: absolute;
+}
+.hands__paper,
+.hands__scissors,
+.hands__rock {
+	width: 140px;
+	height: 140px;
+	border-radius: 50%;
+	position: relative;
+	box-shadow: inset 0px -7px 0px 0px rgba(0, 0, 0, 0.2);
+	display: grid;
+	place-items: center;
+	transition: transform 0.25s;
+}
+.hands__paper {
+	grid-area: "paper";
+	left: -40px;
+	top: -20px;
+	background: var(--paperGradient);
+}
+.hands__scissors {
+	grid-area: scissors;
+	right: -40px;
+	top: -20px;
+	background: var(--scissorsGradient);
+}
+.hands__rock {
+	grid-area: rock;
+	bottom: 20px;
+	background: var(--rockGradient);
+}
+.hands__paper:hover,
+.hands__scissors:hover,
+.hands__rock:hover {
+	transform: translateY(-8px);
+	cursor: pointer;
+}
+/* ----------RULES---------- */
+.rules {
+	width: 100%;
+	max-width: 400px;
+	height: 100vh;
+	max-height: 640px;
+	background-color: var(--white);
+	color: var(--darkText);
+	font-size: 2rem;
+	padding: 1.5em 0;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 9999;
+	box-shadow: 0 0 0 50vmax rgba(0, 0, 0, 0.5);
+}
+.rules__img {
+	width: 80%;
+}
+.rules__close {
+	width: 25px;
+	cursor: pointer;
+}
+.rules-btn {
+	border: none;
+	border: 2px solid var(--headerOutline);
+	color: var(--white);
+	background-color: inherit;
+	font-size: 0.9rem;
+	padding: 0.8em 2em;
+	border-radius: 10px;
+	letter-spacing: 0.2rem;
+	position: absolute;
+	bottom: 2em;
+	cursor: pointer;
+}
+.rules-btn:hover {
+	background-color: var(--white);
+	color: inherit;
+	border-color: var(--white);
+}
+
+/* ----------DUEL---------- */
+.duel {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-areas:
+		"player ia"
+		"result result";
+	place-items: center;
+	column-gap: 2.4em;
+	row-gap: 2.5em;
+	position: relative;
+	top: 10vh;
+	z-index: 1;
+}
+.hands__selected {
+	position: static;
+	pointer-events: none;
+}
+.player-hand {
+	grid-area: player;
+}
+.ia-hand {
+	grid-area: ia;
+}
+.duel__title {
+	font-size: 1rem;
+	font-weight: 600;
+	text-align: center;
+	margin-top: 1em;
+	color: var(--white);
+	letter-spacing: 0.1rem;
+}
+.result {
+	grid-area: result;
+	text-align: center;
+}
+.result__title {
+	font-size: 2.5rem;
+	color: var(--white);
+	margin-bottom: 0.5em;
+}
+.play-btn {
+	border: none;
+	color: var(--darkText);
+	background-color: (--white);
+	font-size: 0.9rem;
+	padding: 1em 2.5em;
+	font-weight: 700;
+	border-radius: 10px;
+	letter-spacing: 0.1rem;
+	cursor: pointer;
+}
+.play-btn:hover {
+	filter: opacity(0.8);
+}
+/* ----------MODIFICADORES---------- */
+.visible {
+	display: none;
+}
+.winner::before {
+	content: "";
+	width: 14vmax;
+	height: 14vmax;
+	border-radius: 50%;
+	box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b, 0 0 0 130px #1e2949;
+	position: absolute;
+	z-index: -1;
+}
+
+/* ----------RESPONSIVE---------- */
+
+@media screen and (min-width: 620px) {
+	/* ----------HANDS---------- */
+	.hands {
+		grid-template-columns: repeat(2, minmax(100px, 200px));
+	}
+	.hands__paper {
+		left: -40px;
+		top: -50px;
+	}
+	.hands__scissors {
+		right: -40px;
+		top: -50px;
+	}
+	.hands__rock {
+		bottom: -20px;
+	}
+
+	/* ----------DUEL---------- */
+	.duel {
+		grid-template-columns: repeat(3, minmax(100px, 1fr));
+		grid-template-areas: "player result ia";
+	}
+	.player-hand,
+	.ia-hand {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+	}
+	.duel__title {
+		order: 1;
+		margin-bottom: 1em;
+		margin-top: 0;
+	}
+	.hands__selected {
+		order: 2;
+	}
+	.hands__paper,
+	.hands__scissors,
+	.hands__rock {
+		width: 15vmax;
+		height: 15vmax;
+	}
+	.hands__img {
+		width: 10.5vmax;
+		height: 10.5vmax;
+	}
+	.hands__img img {
+		width: 4.3vmax;
+		height: auto;
+	}
+	/* ----------RULES---------- */
+	.rules-btn {
+		right: 2em;
+	}
+}

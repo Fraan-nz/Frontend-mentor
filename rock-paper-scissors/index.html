@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@600;700&display=swap"
+			rel="stylesheet"
+		/>
+		<link
+			rel="shortcut icon"
+			href="./resources/images/favicon-32x32.png"
+			type="image/x-icon"
+		/>
+		<link rel="stylesheet" href="./styles.css" />
+		<title>Frontendmentor Challenge</title>
+	</head>
+	<body>
+		<div class="container">
+			<div class="scoreboard">
+				<div class="scoreboard__container-title">
+					<img
+						src="./resources/images/logo.svg"
+						alt="logo"
+						class="scoreboard__title"
+					/>
+				</div>
+				<div class="scoreboard__container-score">
+					<p class="scoreboard__text-score">SCORE</p>
+					<p class="scoreboard__score" id="score">0</p>
+				</div>
+			</div>
+
+			<div id="hands" class="hands">
+				<div id="paper" class="hands__paper">
+					<div class="hands__img">
+						<img src="./resources/images/icon-paper.svg" alt="paper" />
+					</div>
+				</div>
+
+				<div id="scissors" class="hands__scissors">
+					<div class="hands__img">
+						<img src="./resources/images/icon-scissors.svg" alt="scissors" />
+					</div>
+				</div>
+
+				<div id="rock" class="hands__rock">
+					<div class="hands__img">
+						<img src="./resources/images/icon-rock.svg" alt="rock" />
+					</div>
+				</div>
+			</div>
+
+			<div id="duel-result" class="duel visible"></div>
+			<div class="rules visible" id="rules">
+				<h3>RULES</h3>
+				<img
+					class="rules__img"
+					src="./resources/images/image-rules.svg"
+					alt="rules"
+				/>
+				<img
+					class="rules__close"
+					id="close-btn"
+					src="./resources/images/icon-close.svg"
+					alt="close"
+				/>
+			</div>
+
+			<button class="rules-btn" id="rules-btn">RULES</button>
+		</div>
+		<script src="./scripts.js"></script>
+	</body>
+</html>
