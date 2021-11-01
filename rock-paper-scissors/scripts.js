@@ -63,27 +63,31 @@ const play = (player, ia) => {
 //Agrego clase winner al ganador
 userHand.addEventListener("click", (e) => {
 	let player;
-	optionHand.indexOf(e.target.parentElement.parentElement.id) != -1
-		? (player = e.target.parentElement.parentElement.id)
-		: optionHand.indexOf(e.target.parentElement.id) != -1
-		? (player = e.target.parentElement.id)
-		: optionHand.indexOf(e.target.id) != -1
-		? (player = e.target.id)
-		: (player = "");
-	userHand.classList.toggle("visible");
-	duelResult.classList.toggle("visible");
-	if (player != "") {
-		let random = Math.round(Math.random() * 2);
-		let ia = optionHand[random];
-		let resultTextplay = play(player, ia);
-		createResult(player, ia, resultTextplay);
-		countScore.innerHTML = score;
-		if (resultTextplay === "YOU WIN") {
-			document
-				.querySelector(`#${player}.hands__selected`)
-				.classList.add("winner");
-		} else if (resultTextplay === "YOU LOSE") {
-			document.querySelector(`#${ia}.hands__selected`).classList.add("winner");
+	if (e.target.id !== "hands") {
+		optionHand.indexOf(e.target.parentElement.parentElement.id) != -1
+			? (player = e.target.parentElement.parentElement.id)
+			: optionHand.indexOf(e.target.parentElement.id) != -1
+			? (player = e.target.parentElement.id)
+			: optionHand.indexOf(e.target.id) != -1
+			? (player = e.target.id)
+			: (player = "");
+		userHand.classList.toggle("visible");
+		duelResult.classList.toggle("visible");
+		if (player != "") {
+			let random = Math.round(Math.random() * 2);
+			let ia = optionHand[random];
+			let resultTextplay = play(player, ia);
+			createResult(player, ia, resultTextplay);
+			countScore.innerHTML = score;
+			if (resultTextplay === "YOU WIN") {
+				document
+					.querySelector(`#${player}.hands__selected`)
+					.classList.add("winner");
+			} else if (resultTextplay === "YOU LOSE") {
+				document
+					.querySelector(`#${ia}.hands__selected`)
+					.classList.add("winner");
+			}
 		}
 	}
 });

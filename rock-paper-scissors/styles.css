@@ -107,10 +107,10 @@ body {
 	background-image: url(./resources/images/bg-triangle.svg);
 	background-repeat: no-repeat;
 	background-position: center;
-	background-size: contain;
+	background-size: 100%;
 	position: relative;
 	top: 13vh;
-	z-index: 100;
+	/* z-index: 90; */
 }
 .hands__img img {
 	width: 40px;
@@ -270,10 +270,11 @@ body {
 }
 .winner::before {
 	content: "";
-	width: 14vmax;
-	height: 14vmax;
+	width: 13vmax;
+	height: 13vmax;
 	border-radius: 50%;
-	box-shadow: 0 0 0 40px #293251, 0 0 0 80px #232c4b, 0 0 0 130px #1e2949;
+	box-shadow: 0 0 10px 40px #303855, 0 0 10px 80px #262f4e,
+		0 0 10px 130px #1e2947;
 	position: absolute;
 	z-index: -1;
 }
@@ -284,13 +285,14 @@ body {
 	/* ----------HANDS---------- */
 	.hands {
 		grid-template-columns: repeat(2, minmax(100px, 200px));
+		background-size: 80%;
 	}
 	.hands__paper {
-		left: -40px;
+		left: -80px;
 		top: -50px;
 	}
 	.hands__scissors {
-		right: -40px;
+		right: -80px;
 		top: -50px;
 	}
 	.hands__rock {
@@ -319,16 +321,20 @@ body {
 	.hands__paper,
 	.hands__scissors,
 	.hands__rock {
-		width: 15vmax;
-		height: 15vmax;
+		width: 13vmax;
+		height: 13vmax;
+		min-width: 180px;
+		min-height: 180px;
 	}
 	.hands__img {
-		width: 10.5vmax;
-		height: 10.5vmax;
+		width: 9vmax;
+		height: 9vmax;
+		min-width: 120px;
+		min-height: 120px;
 	}
 	.hands__img img {
-		width: 4.3vmax;
-		height: auto;
+		min-width: 4.3vmax;
+		min-height: auto;
 	}
 	/* ----------RULES---------- */
 	.rules-btn {
